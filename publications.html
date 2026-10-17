@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Publications | Hong Kong Society for Developmental and Stem Cell Biology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Recent publications from members of the Hong Kong Society for Developmental and Stem Cell Biology (HKSDSCB)">
+<meta name="keywords" content="HKSDSCB publications, member publications, developmental biology, stem cell biology, regenerative medicine, Hong Kong">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,560;0,9..144,640;1,9..144,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ Tokens ============ */
+:root{
+  --paper:#f7f5f1;
+  --paper-deep:#efede7;
+  --white:#ffffff;
+  --ink:#171928;
+  --navy:#22295e;
+  --navy-deep:#14172e;
+  --muted:#666a7c;
+  --line:#e3e0d6;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.24,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--navy);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 32px}
+section{scroll-margin-top:250px}
+
+/* ============ Type helpers ============ */
+.eyebrow{
+  font-size:22px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--navy);
+  display:inline-flex;align-items:center;gap:16px;
+}
+.eyebrow::before{content:"";width:48px;height:2px;background:var(--navy);display:inline-block}
+.section-title{
+  font-family:var(--serif);font-weight:560;
+  font-size:clamp(34px,4.4vw,54px);line-height:1.08;letter-spacing:-.01em;
+  color:var(--ink);
+}
+.lead{font-size:17.5px;color:#3c3f4f;max-width:56ch}
+
+/* ============ Buttons ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  padding:16px 30px;border:1px solid var(--navy);cursor:pointer;
+  transition:transform .35s var(--ease),background .35s var(--ease),color .35s var(--ease),box-shadow .35s var(--ease);
+}
+.btn-solid{background:var(--navy);color:#fff}
+.btn-solid:hover{background:var(--navy-deep);transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(34,41,94,.55)}
+.btn-light{background:#fff;color:var(--navy);border-color:#fff}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+
+/* ============ Nav ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  padding:26px 0;
+  transition:background .45s var(--ease),padding .45s var(--ease),box-shadow .45s var(--ease);
+}
+.nav.scrolled{background:rgba(255,255,255,.94);padding:14px 0;box-shadow:0 1px 0 var(--line)}
+.nav .container{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:26px}
+.brand img{width:300px;height:300px;border-radius:50%;object-fit:cover;box-shadow:0 24px 50px -22px rgba(10,12,30,.4);transition:width .55s var(--ease),height .55s var(--ease),transform .5s var(--ease)}
+.brand:hover img{transform:scale(1.02)}
+.nav.scrolled .brand img{width:200px;height:200px}
+.brand-name{font-size:26px;font-weight:700;letter-spacing:.14em;color:var(--ink);transition:font-size .45s var(--ease)}
+.nav.scrolled .brand-name{font-size:16px}
+.brand-name span{display:block;font-size:13px;font-weight:600;letter-spacing:.22em;color:var(--muted);margin-top:5px;transition:font-size .45s var(--ease)}
+.nav.scrolled .brand-name span{font-size:10px;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+.nav-links a{
+  font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+  padding:6px 0;border-bottom:1px solid transparent;transition:color .3s var(--ease),border-color .3s var(--ease);
+}
+.nav-links a:hover,.nav-links a.active{color:var(--navy);border-bottom-color:var(--navy)}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:transform .3s var(--ease),opacity .3s}
+.nav.open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.open .menu-btn span:nth-child(2){opacity:0}
+.nav.open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============ Page head ============ */
+.page-hero{background:var(--white);border-bottom:1px solid var(--line);padding:390px 0 96px}
+.page-hero .section-title{margin:20px 0 26px}
+[data-fade]{animation:fadeUp 1s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+
+/* ============ Sections ============ */
+.section{padding:112px 0}
+.section-alt{background:var(--paper-deep)}
+
+/* Submit panel */
+.submit-panel{background:var(--navy);color:#fff;padding:52px 48px;position:relative;overflow:hidden}
+.submit-panel::after{
+  content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.16);
+}
+.submit-panel h3{font-family:var(--serif);font-weight:560;font-size:clamp(30px,3vw,40px);line-height:1.12;margin-bottom:16px}
+.submit-panel p{font-size:13.5px;color:rgba(255,255,255,.78);max-width:52ch;margin-bottom:32px}
+.submit-panel .mail-note{font-size:12px;color:rgba(255,255,255,.6);margin:22px 0 0}
+
+/* ============ Footer ============ */
+footer{background:var(--navy-deep);color:rgba(255,255,255,.72)}
+.foot-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:56px 0}
+.foot-brand{display:flex;align-items:center;gap:28px}
+.foot-brand img{width:200px;height:200px;border-radius:50%;object-fit:cover;flex:none}
+.foot-brand .name{font-family:var(--serif);font-size:19px;font-weight:560;color:#fff;line-height:1.3}
+.foot-brand .name span{display:block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:4px}
+.foot-nav{display:flex;gap:30px;list-style:none;flex-wrap:wrap}
+.foot-nav a{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;transition:color .3s}
+.foot-nav a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);padding:22px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.foot-bottom p{font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.5)}
+.foot-bottom p:last-child{text-transform:uppercase;letter-spacing:.2em;font-size:10.5px;font-weight:600}
+
+/* Reveal on scroll */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ============ Responsive ============ */
+@media (max-width:1024px){
+  .map-frame iframe{height:360px}
+}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .nav-links{
+    position:absolute;top:100%;left:0;right:0;background:var(--paper);
+    flex-direction:column;align-items:flex-start;gap:0;padding:10px 32px 26px;
+    box-shadow:0 1px 0 var(--line);display:none;
+  }
+  .nav.open .nav-links{display:flex}
+  .nav-links a{display:block;padding:13px 0;font-size:12.5px}
+  .brand img{width:200px;height:200px}
+  .nav.scrolled .brand img{width:130px;height:130px}
+  .brand-name{font-size:20px}
+  .nav.scrolled .brand-name{font-size:13px}
+  .page-hero{padding:280px 0 70px}
+}
+@media (max-width:620px){
+  .section{padding:80px 0}
+  .container{padding:0 22px}
+  .brand img{width:150px;height:150px}
+  .nav.scrolled .brand img{width:104px;height:104px}
+  .brand-name{font-size:17px}
+  .nav.scrolled .brand-name{font-size:12px}
+  .brand-name span{font-size:11px}
+  .page-hero{padding:205px 0 56px}
+  .submit-panel{padding:42px 34px}
+  .foot-top{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="HKSDSCB home">
+      <img src="./Hong Kong Society for Developmental Biology_files/logo.jpg" alt="HKSDSCB logo">
+      <span class="brand-name">HKSDSCB<span>Society · Hong Kong</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mission.html">Mission</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="official-journal-of-isdb.html">Official Journal of ISDB</a></li>
+      <li><a href="./Hong Kong Society for Developmental Biology_files/hksdb_membership_registration_form_1.docx" target="_blank">Join Us</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ================= PAGE HEAD ================= -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow" data-fade style="animation-delay:.1s">Publications</p>
+    <h1 class="section-title" data-fade style="animation-delay:.25s">Member<br>Publications</h1>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="./Hong Kong Society for Developmental Biology_files/logo.jpg" alt="HKSDSCB logo">
+        <p class="name">Hong Kong Society for Developmental<br>and Stem Cell Biology<span>HKSDSCB</span></p>
+      </div>
+      <ul class="foot-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="official-journal-of-isdb.html">Official Journal of ISDB</a></li>
+        <li><a href="./Hong Kong Society for Developmental Biology_files/hksdb_membership_registration_form_1.docx" target="_blank">Join Us</a></li>
+      </ul>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Hong Kong Society for Developmental and Stem Cell Biology. All rights reserved.</p>
+      <p>Pokfulam · Hong Kong</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav background on scroll
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>40);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Mobile menu
+const menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// Scroll reveal
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.14,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
