@@ -11,4 +11,4 @@ The Hong Kong Society for Developmental and Stem Cell Biology (HKSDSCB) fosters 
 
 ## Website
 
-https://hksdbweb2022-dot.github.io/main_page/index.html
+https://hksdscb.org.hk/
