@@ -149,6 +149,17 @@ section{scroll-margin-top:250px}
 .event-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:center}
 .poster-wrap{display:block;position:relative;background:#fff;padding:14px;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(23,25,40,.35);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
 .poster-wrap:hover{transform:translateY(-6px);box-shadow:0 40px 70px -30px rgba(23,25,40,.45)}
+.poster-panel{
+  display:flex;flex-direction:column;justify-content:center;gap:16px;
+  background:var(--navy);color:#fff;padding:64px 48px;
+  box-shadow:0 30px 60px -30px rgba(23,25,40,.35);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);
+}
+.poster-panel:hover{transform:translateY(-6px);box-shadow:0 40px 70px -30px rgba(23,25,40,.45)}
+.poster-panel .kicker{font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.poster-panel .big{font-family:var(--serif);font-weight:560;font-size:clamp(38px,3.6vw,52px);line-height:1.05;letter-spacing:-.01em}
+.poster-panel .big span{display:block;font-size:15px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-top:12px;color:rgba(255,255,255,.85)}
+.poster-panel .place{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7)}
 .event-sub{font-family:var(--serif);font-style:italic;font-weight:500;font-size:22px;color:var(--navy);margin:16px 0 8px}
 .event-org{font-size:14px;color:var(--muted);margin-bottom:34px}
 .event-facts{border-top:1px solid var(--line);margin-bottom:38px}
@@ -365,6 +376,29 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72)}
         <div class="event-cta">
           <a class="btn btn-solid" href="https://2026gzstem.casconf.cn/" target="_blank">Conference Website</a>
           <a class="text-link" href="https://2026gzstem.casconf.cn/" target="_blank">2026gzstem.casconf.cn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line);margin:88px 0"></div>
+    <div class="event-grid">
+      <a class="poster-panel reveal" href="https://cuhksls.wixsite.com/crouchersymposium26" target="_blank" aria-label="Croucher Symposium on Stem Cells and Rare Neurological Diseases">
+        <span class="kicker">Inaugural Croucher Symposium</span>
+        <span class="big">4–5<span>Dec 2026</span></span>
+        <span class="place">CUHK · Hong Kong</span>
+      </a>
+      <div class="reveal" style="--d:.15s">
+        <p class="event-sub">Croucher Symposium on Stem Cells and Rare Neurological Diseases</p>
+        <p class="event-org">Hosted by the School of Life Sciences, The Chinese University of Hong Kong</p>
+        <p class="event-sub" style="font-size:16px;line-height:1.7;margin-bottom:30px">The inaugural Croucher Symposium brings together researchers and clinicians working on rare neurological diseases, spanning disease mechanisms, stem cell-based models and therapeutic interventions, with selected short talks drawn from submitted abstracts.</p>
+        <dl class="event-facts">
+          <div><dt>Date</dt><dd><strong>4–5 December 2026</strong></dd></div>
+          <div><dt>Venue</dt><dd>LT1 &amp; LT2, Yasumoto International Academic Park (YIA), CUHK</dd></div>
+          <div><dt>Abstracts</dt><dd>Submit by <strong>1 November 2026</strong></dd></div>
+          <div><dt>Registration</dt><dd>Due <strong>30 November 2026</strong></dd></div>
+        </dl>
+        <div class="event-cta">
+          <a class="btn btn-solid" href="https://cuhksls.wixsite.com/crouchersymposium26" target="_blank">Symposium Website</a>
+          <a class="text-link" href="https://cuhksls.wixsite.com/crouchersymposium26" target="_blank">Programme &amp; Registration ↗</a>
         </div>
       </div>
     </div>
